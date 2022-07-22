@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC APP WEB</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <main class="container">
+        <main class="container__music-app">
+            <section class="container__player container__player-normal-view ">
+                <div class="music__pics">
+                    <div>
+                        <img src="./images/img%20(1).jpg" alt="">
+                    </div>
+
+                </div>
+                <div class="section-bottom">
+                    <div class="details__music-play">
+                        <div class="music__pics_details">
+                            <div>
+                                <img src="./images/img%20(1).jpg" alt="">
+                            </div>
+
+                        </div>
+                        <div class="infos">
+                            <h1 class="music-play-title">
+                                WORSHIP_TIME (DRC)
+                            </h1>
+                            <h3 class="music-play-others-news">
+                                Artiste inconnu
+                            </h3>
+                        </div>
+
+                    </div>
+                    <div class="progress__lecture">
+                        <span class="current-time">00:00:00</span>
+                        <div class="progress-bar">
+                            <div class="progress">
+                                <div class="cursor"></div>
+                            </div>
+                        </div>
+                        <span class="stop-time">12:54:00</span>
+                    </div>
+                    <div class="control_music">
+                        <div class="left">
+                            <button class="btn-control" id="toStart" title="Précédent">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M8 5L8 27L10 27L10 16.5L10.4375 16.8125L23.4375 25.8125L25 26.90625L25 5.09375L23.4375 6.1875L10.4375 15.1875L10 15.5L10 5 Z M 23 8.90625L23 23.09375L12.75 16Z" fill="#FFFFFF" />
+                                </svg>
+                            </button>
+                            <button class="btn-control" id="play-stop" title="Lire">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                                </svg>
+                            </button>
+                            <button class="btn-control" id="toEnd" title="Suivant">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M22 5L22 15.5L21.5625 15.1875L8.5625 6.1875L7 5.09375L7 26.90625L8.5625 25.8125L21.5625 16.8125L22 16.5L22 27L24 27L24 5 Z M 9 8.90625L19.25 16L9 23.09375Z" fill="#FFFFFF" />
+                                </svg>
+                            </button>
+                            <button class="btn-control circle-control" id="randomPlay" title="Lecture aléatoire : Désactivée">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M10.5 5C8.0295455 5 6 7.0295455 6 9.5L6 13.361328L4.2578125 11.617188L2.84375 13.03125L7 17.189453L11.15625 13.03125L9.7421875 11.617188L8 13.361328L8 9.5C8 8.1204545 9.1204545 7 10.5 7C11.879545 7 13 8.1204545 13 9.5L13 22.5C13 23.879545 11.879545 25 10.5 25C9.1204545 25 8 23.879545 8 22.5L8 20L6 20L6 22.5C6 24.970455 8.0295455 27 10.5 27C12.970455 27 15 24.970455 15 22.5L15 9.5C15 7.0295455 12.970455 5 10.5 5 z M 21.5 5C19.029545 5 17 7.0295455 17 9.5L17 22.5C17 24.970455 19.029545 27 21.5 27C23.970455 27 26 24.970455 26 22.5L26 20L24 20L24 22.5C24 23.879545 22.879545 25 21.5 25C20.120455 25 19 23.879545 19 22.5L19 9.5C19 8.1204545 20.120455 7 21.5 7C22.879545 7 24 8.1204545 24 9.5L24 13.361328L22.257812 11.617188L20.84375 13.03125L25 17.189453L29.15625 13.03125L27.742188 11.617188L26 13.361328L26 9.5C26 7.0295455 23.970455 5 21.5 5 z" fill="#FFFFFF" />
+                                </svg>
+                            </button>
+                            <button class="btn-control circle-control" id="RepeatMusic" title="Répetition">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M14 3L14 7L4 7L4 25L12 25L11 24L12 23L6 23L6 9L14 9L14 13L19 8 Z M 20 7L21 8L20 9L26 9L26 23L18 23L18 19L13 24L18 29L18 25L28 25L28 7Z" fill="#FFFFFF" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="right">
+                            <button class="btn-control" id="Volume" title="Volume">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M15 4.59375L13.28125 6.28125L8.5625 11L4 11L4 21L8.5625 21L13.28125 25.71875L15 27.40625 Z M 24.125 6.375L22.71875 7.78125C24.742188 9.929688 26 12.820313 26 16C26 19.179688 24.742188 22.070313 22.71875 24.21875L24.125 25.625C26.511719 23.113281 28 19.730469 28 16C28 12.269531 26.511719 8.886719 24.125 6.375 Z M 21.3125 9.1875L19.90625 10.625C21.207031 12.046875 22 13.925781 22 16C22 18.074219 21.207031 19.949219 19.90625 21.375L21.3125 22.8125C22.972656 21.027344 24 18.625 24 16C24 13.375 22.972656 10.972656 21.3125 9.1875 Z M 13 9.4375L13 22.5625L9.71875 19.28125L9.40625 19L6 19L6 13L9.40625 13L9.71875 12.71875 Z M 18.5 12.03125L17.0625 13.46875C17.640625 14.164063 18 15.027344 18 16C18 16.972656 17.640625 17.835938 17.0625 18.53125L18.5 19.96875C19.4375 18.910156 20 17.523438 20 16C20 14.476563 19.4375 13.089844 18.5 12.03125Z" fill="#FFFFFF" />
+                                </svg>
+                            </button>
+                            <button class="btn-control" id="Menus" title="Apropos">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                    <path d="M16 6C14.894531 6 14 6.894531 14 8C14 9.105469 14.894531 10 16 10C17.105469 10 18 9.105469 18 8C18 6.894531 17.105469 6 16 6 Z M 16 14C14.894531 14 14 14.894531 14 16C14 17.105469 14.894531 18 16 18C17.105469 18 18 17.105469 18 16C18 14.894531 17.105469 14 16 14 Z M 16 22C14.894531 22 14 22.894531 14 24C14 25.105469 14.894531 26 16 26C17.105469 26 18 25.105469 18 24C18 22.894531 17.105469 22 16 22Z" fill="#FFFFFF" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    <button class="swipper swipper-inactive" title="Afficher toutes la liste">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M4.21875 10.78125L2.78125 12.21875L15.28125 24.71875L16 25.40625L16.71875 24.71875L29.21875 12.21875L27.78125 10.78125L16 22.5625Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+            <section class="container__music_list">
+                <div class="music is-playing">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+                <div class="music">
+                    <span class="infos-music">
+                        <span class="title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                <path d="M17 7L17 9L21 9L21 7 Z M 5 10L5 12L9 12L9 10 Z M 17 10L17 12L21 12L21 10 Z M 5 13L5 15L9 15L9 13 Z M 17 13L17 15L21 15L21 13 Z M 23 13L23 15L27 15L27 13 Z M 5 16L5 18L9 18L9 16 Z M 11 16L11 18L15 18L15 16 Z M 17 16L17 18L21 18L21 16 Z M 23 16L23 18L27 18L27 16 Z M 5 19L5 21L9 21L9 19 Z M 11 19L11 21L15 21L15 19 Z M 17 19L17 21L21 21L21 19 Z M 23 19L23 21L27 21L27 19 Z M 5 22L5 24L9 24L9 22 Z M 11 22L11 24L15 24L15 22 Z M 17 22L17 24L21 24L21 22 Z M 23 22L23 24L27 24L27 22 Z M 5 25L5 27L9 27L9 25 Z M 11 25L11 27L15 27L15 25 Z M 17 25L17 27L21 27L21 25 Z M 23 25L23 27L27 27L27 25Z" fill="#FFFFFF" />
+                            </svg>Worship_Time (DRC)</span>
+                        <span class="details">Aucun artiste</span>
+                    </span>
+                    <button class="play-music-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <path d="M9 5.15625L9 26.84375L10.53125 25.84375L25.84375 16L10.53125 6.15625 Z M 11 8.8125L22.15625 16L11 23.1875Z" fill="#FFFFFF" />
+                        </svg>
+                    </button>
+                    <span class="music-duration">
+                        12:05:15
+                    </span>
+                </div>
+            </section>
+        </main>
+    </main>
+    <script src="./js/ui.js"></script>
+</body>
+
+</html>
